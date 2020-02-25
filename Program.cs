@@ -16,6 +16,8 @@ namespace Deliverable___Methods
             if (operatorName == "sum")
             {
                 finalCalculation = firstInteger + secondInteger;
+                //Prints final output of calculation in user-friendly text
+                Console.WriteLine("The " + operatorName + " of " + firstInteger.ToString() + " and " + secondInteger.ToString() + " is: " + finalCalculation.ToString());
             }
             else if (operatorName == "difference")
             {
@@ -28,10 +30,14 @@ namespace Deliverable___Methods
                 {
                     finalCalculation = secondInteger - firstInteger;
                 }
+                //Prints final output of calculation in user-friendly text
+                Console.WriteLine("The " + operatorName + " of " + firstInteger.ToString() + " and " + secondInteger.ToString() + " is: " + finalCalculation.ToString());
             }
             else if (operatorName == "product")
             {
                 finalCalculation = firstInteger * secondInteger;
+                //Prints final output of calculation in user-friendly text
+                Console.WriteLine("The " + operatorName + " of " + firstInteger.ToString() + " and " + secondInteger.ToString() + " is: " + finalCalculation.ToString());
             }
             else if (operatorName == "quotient")
             {
@@ -45,14 +51,13 @@ namespace Deliverable___Methods
                 else{
                     finalCalculation = firstInteger / secondInteger;
                 }
+                //Prints final output of calculation in user-friendly text
+                Console.WriteLine("The " + operatorName + " of " + firstInteger.ToString() + " and " + secondInteger.ToString() + " is: " + finalCalculation.ToString());
             }
             else //in case user enters invalid operator string
             {
-                Console.WriteLine("Invalid Operator!");
+                Console.WriteLine("Invalid Operator! Please restart console and try again.");
             }
-
-            //Prints final output of calculation in user-friendly text
-            Console.WriteLine("The " + operatorName + " of " + firstInteger.ToString() + " and " + secondInteger.ToString() + " is: " + finalCalculation.ToString());
         }
         static void Main(string[] args)
         {
