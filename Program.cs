@@ -35,7 +35,16 @@ namespace Deliverable___Methods
             }
             else if (operatorName == "quotient")
             {
-                finalCalculation = firstInteger / secondInteger;
+                //in case user asks to divide by 0
+                if (secondInteger == 0)
+                {
+                    Console.WriteLine("Cannot divide by 0!");
+                    //terminate program
+                    Environment.Exit(0);
+                }
+                else{
+                    finalCalculation = firstInteger / secondInteger;
+                }
             }
             else //in case user enters invalid operator string
             {
