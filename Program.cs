@@ -7,13 +7,40 @@ namespace Deliverable___Methods
         static void integerOperation(int firstInteger, int secondInteger, string operatorName)
         {
             //Variable to be updated with final calculation value
-            int finalCalculation = 0;
+            float finalCalculation = 0;
 
             //Convert operatorName to lowercase for normalization purposes
             operatorName = operatorName.ToLower();
 
             //Determine which operation is to be performed, then conduct calculation to update finalCalculation numeric variable
-
+            if (operatorName == "sum")
+            {
+                finalCalculation = firstInteger + secondInteger;
+            }
+            else if (operatorName == "difference")
+            {
+                //determine which integer is larger to calculate difference
+                if (firstInteger >= secondInteger)
+                {
+                    finalCalculation = firstInteger - secondInteger;
+                }
+                else
+                {
+                    finalCalculation = secondInteger - firstInteger;
+                }
+            }
+            else if (operatorName == "product")
+            {
+                finalCalculation = firstInteger * secondInteger;
+            }
+            else if (operatorName == "quotient")
+            {
+                finalCalculation = firstInteger / secondInteger;
+            }
+            else //in case user enters invalid operator string
+            {
+                Console.WriteLine("Invalid Operator!");
+            }
 
             //Prints final output of calculation in user-friendly text
             Console.WriteLine("The " + operatorName + " of " + firstInteger.ToString() + " and " + secondInteger.ToString() + " is: " + finalCalculation.ToString());
